@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "mon-cap",
+  "compatibility_date": "2026-08-25",
+  "assets": {
+    "directory": ".",
+    "include": [
+      "index.html",
+      "src/**"
+    ]
+  }
+}
