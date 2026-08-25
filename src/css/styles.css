@@ -1,0 +1,105 @@
+:root {
+  --ivory: #f6f2e8;
+  --sage: #a8b7a1;
+  --jade: #6f8f79;
+  --moss: #536b57;
+  --forest: #2f4938;
+  --ink: #233128;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #d9ddd7;
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.planner-page {
+  width: 148mm;
+  min-height: 210mm;
+  margin: 24px auto;
+  background: var(--ivory);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+.cover-page {
+  display: grid;
+  place-items: center;
+  padding: 12mm;
+}
+
+.cover-frame {
+  width: 100%;
+  min-height: 186mm;
+  border: 1px solid var(--sage);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16mm;
+}
+
+.eyebrow,
+.edition {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: 8pt;
+}
+
+h1 {
+  margin: 8mm 0 2mm;
+  font-size: 31pt;
+  letter-spacing: .08em;
+  color: var(--forest);
+  font-weight: 500;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 12pt;
+  font-style: italic;
+  color: var(--moss);
+}
+
+.seal {
+  margin: 18mm 0;
+  width: 19mm;
+  height: 19mm;
+  border: 1px solid var(--jade);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 17pt;
+  color: var(--forest);
+}
+
+.edition { color: var(--jade); }
+
+@page {
+  size: A5 portrait;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    background: white;
+  }
+
+  .planner-page {
+    margin: 0;
+    box-shadow: none;
+    width: 148mm;
+    min-height: 210mm;
+    page-break-after: always;
+  }
+}
