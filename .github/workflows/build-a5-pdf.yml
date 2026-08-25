@@ -25,10 +25,21 @@ jobs:
           CHROME_PATH: /usr/bin/google-chrome
         run: npm run pdf
 
-      - name: Verify PDF page size
+      - name: Verify native A5 PDF
         run: |
-          pdfinfo dist/MON_CAP_A5.pdf
-          pdfinfo dist/MON_CAP_A5.pdf | grep -E "Page size:.*419\.5.*595\.2.*pts"
+          python -m pip install --quiet pypdf
+          python - <<'PY'
+          from pypdf import PdfReader
+          r = PdfReader('dist/MON_CAP_A5.pdf')
+          assert len(r.pages) == 5, f'Expected 5 pages, got {len(r.pages)}'
+          expected_w, expected_h = 419.5276, 595.2756
+          for i, page in enumerate(r.pages, 1):
+              w = float(page.mediabox.width)
+              h = float(page.mediabox.height)
+              assert abs(w - expected_w) < 1.0, f'Page {i}: width {w} pt is not A5'
+              assert abs(h - expected_h) < 1.0, f'Page {i}: height {h} pt is not A5'
+          print(f'OK: {len(r.pages)} pages, all native A5 (148 x 210 mm)')
+          PY
 
       - name: Upload A5 PDF
         uses: actions/upload-artifact@v4
