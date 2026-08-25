@@ -1,0 +1,12 @@
+{
+  "name": "mon-cap",
+  "private": true,
+  "type": "module",
+  "description": "Prototype planner A5 MON CAP",
+  "scripts": {
+    "pdf": "node scripts/generate-pdf.mjs"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.16.0"
+  }
+}

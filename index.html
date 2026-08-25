@@ -3,17 +3,96 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MON CAP</title>
+  <title>MON CAP — Prototype A5</title>
   <link rel="stylesheet" href="src/css/styles.css" />
 </head>
 <body>
-  <main class="planner-page cover-page">
-    <section class="cover-frame">
-      <p class="eyebrow">Planner de vie</p>
-      <h1>MON CAP</h1>
-      <p class="subtitle">Avancer à son rythme, naturellement.</p>
-      <div class="seal" aria-hidden="true">龍</div>
-      <p class="edition">Prototype graphique — A5</p>
+  <main class="planner">
+    <section class="planner-page cover-page">
+      <div class="corner-leaf top-left">❧</div>
+      <div class="corner-leaf bottom-right">❧</div>
+      <section class="cover-frame">
+        <p class="eyebrow">Planner de vie</p>
+        <h1>MON CAP</h1>
+        <p class="subtitle">Prendre le cap. Jour après jour.</p>
+        <div class="logo-row" aria-label="symboles graphiques">
+          <span class="logo-mark">☯</span>
+          <span class="logo-mark dragon">龍</span>
+          <span class="logo-mark">❀</span>
+        </div>
+        <p class="edition">Prototype graphique — A5</p>
+      </section>
+    </section>
+
+    <section class="planner-page content-page letter-page">
+      <header class="page-header">
+        <p class="section-kicker">Commencer</p>
+        <h2>Une lettre à moi-même</h2>
+        <p class="page-intro">Quelques mots pour me rappeler qui je suis aujourd’hui, ce que je veux protéger et la direction que je choisis.</p>
+      </header>
+      <div class="writing-lines tall-lines"></div>
+      <footer class="page-footer">MON CAP · avancer avec intention</footer>
+    </section>
+
+    <section class="planner-page content-page guide-page">
+      <header class="page-header">
+        <p class="section-kicker">Mode d’emploi</p>
+        <h2>Mon planner, mon rythme</h2>
+      </header>
+      <div class="principles-grid">
+        <article><span>01</span><h3>Respirer</h3><p>Créer de l’espace pour l’essentiel.</p></article>
+        <article><span>02</span><h3>Choisir</h3><p>Définir peu de priorités, mais les tenir.</p></article>
+        <article><span>03</span><h3>Avancer</h3><p>Transformer les intentions en petites actions.</p></article>
+        <article><span>04</span><h3>Observer</h3><p>Faire le point sans chercher la perfection.</p></article>
+      </div>
+      <div class="quote-box">
+        <p>« Le cap donne la direction. Le rythme permet d’y arriver. »</p>
+      </div>
+      <footer class="page-footer">Nature · Zen · Clarté · Harmonie</footer>
+    </section>
+
+    <section class="planner-page content-page monthly-page">
+      <header class="month-header">
+        <div><p class="section-kicker">Mon mois</p><h2>Avril</h2></div>
+        <div class="month-year">2027</div>
+      </header>
+      <div class="month-focus">
+        <div><h3>Mon cap du mois</h3><div class="blank-lines small"></div></div>
+        <div><h3>3 priorités</h3><ol><li></li><li></li><li></li></ol></div>
+      </div>
+      <div class="calendar-grid">
+        <div class="day-name">L</div><div class="day-name">M</div><div class="day-name">M</div><div class="day-name">J</div><div class="day-name">V</div><div class="day-name">S</div><div class="day-name">D</div>
+        <div class="day muted"></div><div class="day muted"></div><div class="day muted"></div><div class="day"><b>1</b></div><div class="day"><b>2</b></div><div class="day"><b>3</b></div><div class="day"><b>4</b></div>
+        <div class="day"><b>5</b></div><div class="day"><b>6</b></div><div class="day"><b>7</b></div><div class="day"><b>8</b></div><div class="day"><b>9</b></div><div class="day"><b>10</b></div><div class="day"><b>11</b></div>
+        <div class="day"><b>12</b></div><div class="day"><b>13</b></div><div class="day"><b>14</b></div><div class="day"><b>15</b></div><div class="day"><b>16</b></div><div class="day"><b>17</b></div><div class="day"><b>18</b></div>
+        <div class="day"><b>19</b></div><div class="day"><b>20</b></div><div class="day"><b>21</b></div><div class="day"><b>22</b></div><div class="day"><b>23</b></div><div class="day"><b>24</b></div><div class="day"><b>25</b></div>
+        <div class="day"><b>26</b></div><div class="day"><b>27</b></div><div class="day"><b>28</b></div><div class="day"><b>29</b></div><div class="day"><b>30</b></div><div class="day muted"></div><div class="day muted"></div>
+      </div>
+      <div class="month-bottom"><div><h3>À ne pas oublier</h3><div class="blank-lines mini"></div></div><div><h3>Gratitude</h3><div class="blank-lines mini"></div></div></div>
+    </section>
+
+    <section class="planner-page content-page weekly-page">
+      <header class="week-header">
+        <div><p class="section-kicker">Ma semaine</p><h2>Semaine 16</h2></div>
+        <p>19 — 25 avril 2027</p>
+      </header>
+      <div class="weekly-priorities">
+        <div><h3>Mes 3 priorités</h3><ol><li></li><li></li><li></li></ol></div>
+        <div><h3>Temps pour moi</h3><p>Sport · calme · couple · plaisir</p></div>
+      </div>
+      <div class="week-grid">
+        <article><strong>Lun 19</strong><div></div></article>
+        <article><strong>Mar 20</strong><div></div></article>
+        <article><strong>Mer 21</strong><div></div></article>
+        <article><strong>Jeu 22</strong><div></div></article>
+        <article><strong>Ven 23</strong><div></div></article>
+        <article><strong>Sam 24</strong><div></div></article>
+        <article><strong>Dim 25</strong><div></div></article>
+      </div>
+      <div class="week-bottom">
+        <div><h3>Menu & courses</h3><div class="blank-lines mini"></div></div>
+        <div><h3>Finances & notes</h3><div class="blank-lines mini"></div></div>
+      </div>
     </section>
   </main>
 </body>
