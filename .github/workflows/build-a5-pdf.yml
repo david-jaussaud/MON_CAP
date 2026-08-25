@@ -1,0 +1,37 @@
+name: Build A5 PDF
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate native A5 PDF
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: npm run pdf
+
+      - name: Verify PDF page size
+        run: |
+          pdfinfo dist/MON_CAP_A5.pdf
+          pdfinfo dist/MON_CAP_A5.pdf | grep -E "Page size:.*419\.5.*595\.2.*pts"
+
+      - name: Upload A5 PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: MON_CAP_A5
+          path: dist/MON_CAP_A5.pdf
+          if-no-files-found: error
