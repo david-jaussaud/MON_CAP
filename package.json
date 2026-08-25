@@ -1,0 +1,11 @@
+{
+  "name": "mon-cap",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pdf": "node scripts/generate-pdf.mjs"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.16.0"
+  }
+}
